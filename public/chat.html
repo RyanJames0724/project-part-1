@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <!-- main chat form including the heading nav bar and the content after that -->
+    <div class="chat-form">
+      <!-- nav bar for the header part -->
+      <nav class="navbar">
+        <!-- ul for displaying anchor tag without a built in margin between them -->
+        <ul>
+          <li class="first-list">
+            <a href="chat.html" class="nav current-nav">Group Chat</a>
+          </li>
+          <li><a href="users-list.html" class="nav">Manage Users</a></li>
+          <li>
+            <a href="documents-list.html" class="nav">Manage Documents</a>
+          </li>
+          <li class="last-list">
+            <a href="logout.html" class="nav">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- div for the middle part chat container -->
+      <div class="chat-container">
+        <!-- div for the top part including the close button on the right side -->
+        <div class="chat-close">
+          <p>Group Chat</p>
+          <!-- div for the img close chat modal -->
+          <div class="close-image">
+            <img src="../src/image/close-window.png" alt="close-window" />
+          </div>
+        </div>
+        <!-- div for main chat including the messages from other person -->
+        <div class="chat-main-content">
+          <p>[2013-01-27 01:00:16] Text User : Lorem ipsum dolor sit amet,</p>
+          <p>
+            [2013-01-27 01:05:22] Text User : consetetur sadipscing elitr, sed
+            diam nonumy eirmod
+          </p>
+          <p>
+            [2013-01-27 01:11:14] Anne Hunter : tempor invidunt ut labore et
+            dolore magna
+          </p>
+          <p>
+            [2013-01-27 02:11:35] Jack Washk : aliquyam erat, sed diam voluptua.
+            At vero eos et
+          </p>
+        </div>
+      </div>
+      <!-- div for user name, input for typing the message and the buttons, send and refresh -->
+      <div class="user-message-container">
+        <p>Anne Hunter</p>
+        <!-- input tag for typing/displaying the messsage -->
+        <input
+          type="text"
+          name="user-message"
+          id="user-message"
+          placeholder="I am good"
+        />
+        <!-- divisions of the button send and refresh chat area -->
+        <div class="message-button">
+          <a href="#" class="send-message-button">Send</a>
+          <a href="#">Refersh</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

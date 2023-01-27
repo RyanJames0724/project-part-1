@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <!-- documents list main container -->
+    <div class="documents-list-form">
+      <!-- nav bar for the header part -->
+      <nav class="navbar">
+        <!-- ul for displaying anchor tag without a built in margin between them -->
+        <ul>
+          <li class="first-list">
+            <a href="chat.html" class="nav">Group Chat</a>
+          </li>
+          <li><a href="users-list.html" class="nav">Manage Users</a></li>
+          <li>
+            <a href="documents-list.html" class="nav current-nav"
+              >Manage Documents</a
+            >
+          </li>
+          <li class="last-list">
+            <a href="logout.html" class="nav">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- start of documents main/middle container for my uploads -->
+      <div class="documents-container">
+        <p class="change-font">My Uploads</p>
+        <!-- start of my uploads main table -->
+        <table class="my-uploads-table" cellspacing="0">
+          <!-- styling three columns -->
+          <col class="documents-first-column" />
+          <col class="documents-second-column" />
+          <col class="documents-third-column" />
+          <!-- table head start -->
+          <thead>
+            <!-- head row -->
+            <tr>
+              <!-- head data -->
+              <th class="align-left">Label</th>
+              <th class="border-left">File Name</th>
+              <th class="border-left">Action</th>
+            </tr>
+            <!-- table head end -->
+          </thead>
+          <!-- table body start -->
+          <tbody>
+            <!-- start of body row -->
+            <!-- first row -->
+            <tr>
+              <!-- first row data -->
+              <td class="align-left">Sales Report</td>
+              <td class="border-left">sales-Sep2014.xls</td>
+              <td class="border-left">
+                <a href="#edit-modal" class="edit-button">Edit</a>
+                |
+                <a href="#delete-modal" class="delete-button">Delete</a>
+                |
+                <a href="share.html" class="delete-button">Share</a>
+              </td>
+            </tr>
+            <!-- second row -->
+            <tr>
+              <!-- second row data -->
+              <td class="align-left">Quarterly Summary</td>
+              <td class="border-left">SummaryQ4-2014.ppt</td>
+              <td class="border-left">
+                <a href="#edit-modal" class="edit-button">Edit</a>
+                |
+                <a href="#delete-modal" class="delete-button">Delete</a>
+                |
+                <a href="share.html" class="delete-button">Share</a>
+              </td>
+            </tr>
+            <!-- third row -->
+            <tr>
+              <!-- third row data -->
+              <td class="align-left">Projection 2013-14</td>
+              <td class="border-left">SalesProfitProjection.xls</td>
+              <td class="border-left">
+                <a href="#edit-modal" class="edit-button">Edit</a>
+                |
+                <a href="#delete-modal" class="delete-button">Delete</a>
+                |
+                <a href="share.html" class="delete-button">Share</a>
+              </td>
+            </tr>
+            <!-- start of two empty rows -->
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <!-- end of two empty rows -->
+          </tbody>
+          <!-- end of my uploads table -->
+        </table>
+      </div>
+      <!-- start of documents main/middle container for shared uploads -->
+      <div class="documents-container">
+        <p class="change-font">Shared Uploads</p>
+        <!-- start of shared uploads main table -->
+        <table class="shared-uploads-table" cellspacing="0">
+          <!-- styling three columns -->
+          <col class="documents-first-column" />
+          <col class="documents-second-column" />
+          <col class="documents-third-column" />
+          <!-- table head start -->
+          <thead>
+            <!-- head row -->
+            <tr>
+              <!-- head data -->
+              <th class="align-left">Label</th>
+              <th class="border-left">File Name</th>
+              <th class="border-left">Shared by</th>
+            </tr>
+            <!-- table head end -->
+          </thead>
+          <!-- table body start -->
+          <tbody>
+            <!-- start of body row -->
+            <!-- first row -->
+            <tr>
+              <!-- first row data -->
+              <td class="align-left">Sales Team Attendance Sept 2014</td>
+              <td class="border-left">Sale-Attend-Seps2014.xls</td>
+              <td class="border-left">anne.hunter@mail.com</td>
+            </tr>
+            <!-- second row -->
+            <tr>
+              <!-- second row data -->
+              <td class="align-left">Office Rules</td>
+              <td class="border-left">OfficeRule.doc</td>
+              <td class="border-left">hr@office.com</td>
+            </tr>
+            <!-- start of two empty rows -->
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <!-- table data/cell for the file upload -->
+              <td class="align-left user-upload-file">
+                <a href="#upload-modal">+ Add Upload</a>
+              </td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <!-- table body end -->
+          </tbody>
+        </table>
+      </div>
+      <!-- edit upload container -->
+      <div class="edit-container" id="edit-modal">
+        <!-- div for top edit part of file description and close image -->
+        <div class="edit-upload-description">
+          <div class="edit-close">
+            <p>Edit</p>
+            <a class="close-edit-container" href=""
+              ><img src="../src/image/close-window.png" alt="close-window"
+            /></a>
+          </div>
+        </div>
+        <!-- start of modal main container for editing file description -->
+        <div class="modal-main-content">
+          <div class="file-description-edit">
+            <label for="file-to-share">File Description</label>
+            <input
+              type="text"
+              name="file-to-share"
+              id="file-to-share"
+              placeholder="Sales Report"
+            />
+          </div>
+          <div class="save-button-option">
+            <a href="#" class="save-button">Save</a>
+            <a href="#" class="cancel-save-button">Cancel</a>
+          </div>
+          <!-- end of modal main container for editing file description -->
+        </div>
+      </div>
+      <!-- start of modal main container for deleting file -->
+      <div class="delete-container" id="delete-modal">
+        <div class="delete-option-container">
+          <div class="delete-close">
+            <p>Confirm User Deletion</p>
+            <a class="close-window" href=""
+              ><img src="../src/image/close-window.png" alt="close-window"
+            /></a>
+          </div>
+        </div>
+        <div class="ques-mark">
+          <img src="../src/image/ques-mark.png" alt="question-mark" />
+          <p>Are you Sure?</p>
+        </div>
+        <div class="delete-option">
+          <a class="active" href="#">ok</a>
+          <a href="#" class="cancel">cancel</a>
+        </div>
+        <!-- end of modal main container for deleting file -->
+      </div>
+      <!-- start of modal main container for uploading file -->
+      <div class="upload-container" id="upload-modal">
+        <div class="file-upload-container">
+          <div class="modal-close">
+            <p>Upload</p>
+            <a class="close-modal-container" href=""
+              ><img src="../src/image/close-window.png" alt="close-window"
+            /></a>
+          </div>
+        </div>
+        <div class="modal-main-content">
+          <div class="file-description-share">
+            <label for="file-to-share">File Description</label>
+            <input
+              type="text"
+              name="file-to-share"
+              id="file-to-share"
+              value="Sample File"
+            />
+          </div>
+          <div class="file-to-upload">
+            <label for="">File Upload</label>
+            <input type="file" name="user-file" id="user-file" class="choose" />
+          </div>
+          <div class="upload-button-option">
+            <a href="#" class="upload-button">Upload Now</a>
+            <a href="#" class="cancel-upload-button">Cancel</a>
+          </div>
+        </div>
+        <!-- start of modal main container for uploading file -->
+      </div>
+      <!-- end of documents list main container -->
+    </div>
+  </body>
+</html>

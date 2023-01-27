@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <!-- section for centering the content -->
+    <section>
+      <!-- whole form holder -->
+      <div class="form-holder">
+        <h1 class="login-heading">Login</h1>
+        <!-- main form for user's login -->
+        <form action="./login-success.html" method="get">
+          <!-- login divisions holder -->
+          <div class="login-holder">
+            <!-- div for user input which include email -->
+            <div class="user-input">
+              <label for="login-email">Email</label>
+              <input
+                type="email"
+                name="login-email"
+                id="login-email"
+                placeholder="anne.hunter@mail.com"
+              />
+            </div>
+            <!-- div for user input which include password -->
+            <div class="user-input">
+              <label for="login-password">Password</label>
+              <input
+                type="password"
+                name="login-password"
+                id="login-password"
+                placeholder="123456"
+              />
+            </div>
+          </div>
+          <!-- a form submit button outside the login holder -->
+          <input type="submit" value="Login" class="submit-login" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

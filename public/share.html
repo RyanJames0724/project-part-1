@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <div class="chat-form">
+      <nav class="navbar">
+        <ul>
+          <li class="first-list">
+            <a href="chat.html" class="nav">Group Chat</a>
+          </li>
+          <li><a href="users-list.html" class="nav">Manage Users</a></li>
+          <li>
+            <a href="documents-list.html" class="nav current-nav"
+              >Manage Documents</a
+            >
+          </li>
+          <li class="last-list">
+            <a href="logout.html" class="nav">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="documents-container">
+        <p class="change-font">Upload Sharing</p>
+        <p class="adding-size">: Sample Text</p>
+        <table class="share-file-table" cellspacing="0">
+          <col style="width: 50%" />
+          <col style="width: 50%" />
+          <thead>
+            <tr>
+              <th class="align-left">Shared User</th>
+              <th class="border-left">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="align-left">Anne Hunter</td>
+              <td class="border-left">
+                <a href="#delete-modal" class="delete-button">Remove</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-left">Text User</td>
+              <td class="border-left">
+                <a href="#delete-modal" class="delete-button">Remove</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty last-row"></td>
+              <td class="empty last-row"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="sharing-container">
+          <p class="change-font">Add Sharing</p>
+          <div class="add-sharing-container">
+            <p>Choose User:</p>
+            <div class="share-select-holder">
+              <select name="person-to-share" id="person-to-share">
+                <option value="jbose">J Bose</option>
+                <option value="hr">HR</option>
+                <option value="harsh zaveri">Harsh Zaveri</option>
+              </select>
+            </div>
+            <a href="#">Add Share</a>
+          </div>
+        </div>
+        <div class="delete-container" id="delete-modal">
+          <div class="delete-option-container">
+            <div class="delete-close">
+              <p class="font-change">Confirm From Web Page</p>
+              <a class="close-window" href=""
+                ><img src="../src/image/close-window.png" alt="close-window"
+              /></a>
+            </div>
+          </div>
+          <div class="ques-mark">
+            <img src="../src/image/ques-mark.png" alt="question-mark" />
+            <p class="font-change">Are you Sure?</p>
+          </div>
+          <div class="delete-option">
+            <a class="active" href="#">ok</a>
+            <a href="#">cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

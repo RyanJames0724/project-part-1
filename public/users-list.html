@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <!-- users list main container -->
+    <div class="users-list-form">
+      <!-- nav bar for the header part -->
+      <nav class="navbar">
+        <ul>
+          <li class="first-list">
+            <a href="chat.html" class="nav">Group Chat</a>
+          </li>
+          <li>
+            <a href="users-list.html" class="nav current-nav">Manage Users</a>
+          </li>
+          <li>
+            <a href="documents-list.html" class="nav">Manage Documents</a>
+          </li>
+          <li class="last-list">
+            <a href="logout.html" class="nav">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- div for the users table -->
+      <div>
+        <h1>Users</h1>
+        <!-- start of main table -->
+        <table class="users-list-table" cellspacing="0">
+          <!-- styling three columns -->
+          <col class="users-first-column" />
+          <col class="users-second-column" />
+          <col class="users-third-column" />
+          <!-- table head start -->
+          <thead>
+            <!-- head row -->
+            <tr>
+              <!-- head data -->
+              <th class="align-left">Name</th>
+              <th class="border-left">User Email ID</th>
+              <th class="border-left"></th>
+            </tr>
+            <!-- table head end -->
+          </thead>
+          <!-- table body start -->
+          <tbody>
+            <!-- start of body row -->
+            <!-- first row -->
+            <tr>
+              <!-- first row data -->
+              <td class="align-left">Text User</td>
+              <td class="border-left">textuser@gmail.com</td>
+              <td class="border-left">
+                <a href="edit-user.html" class="edit-button">Edit</a>|<a
+                  href="#delete-modal"
+                  class="delete-button"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            <!-- second row -->
+            <tr>
+              <!-- second row data -->
+              <td class="align-left">Anne Hunter</td>
+              <td class="border-left">anne.hunter@mail.com</td>
+              <td class="border-left">
+                <a href="edit-user.html" class="edit-button">Edit</a>|<a
+                  href="#delete-modal"
+                  class="delete-button"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            <!-- third row -->
+            <tr>
+              <!-- second row data -->
+              <td class="align-left">Jale Boser</td>
+              <td class="border-left">Jale@yahoo.com</td>
+              <td class="border-left">
+                <a href="edit-user.html" class="edit-button">Edit</a>|<a
+                  href="#delete-modal"
+                  class="delete-button"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            <!-- start of ten empty rows -->
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <!-- end of ten empty rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- delete modal container -->
+    <div class="delete-container" id="delete-modal">
+      <!-- delete close option container  -->
+      <div class="delete-option-container">
+        <!-- div for top header including the X image to close the modal -->
+        <div class="delete-close">
+          <p>Confirm User Deletion</p>
+          <a class="close-window" href=""
+            ><img src="../src/image/close-window.png" alt="close-window"
+          /></a>
+        </div>
+      </div>
+      <!-- main delete modal content -->
+      <div class="ques-mark">
+        <img src="../src/image/ques-mark.png" alt="question-mark" />
+        <p>Are you Sure?</p>
+      </div>
+      <!-- delete two buttons option -->
+      <div class="delete-option">
+        <a class="active" href="#">ok</a>
+        <a href="#">cancel</a>
+      </div>
+    </div>
+  </body>
+</html>

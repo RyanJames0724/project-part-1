@@ -1,0 +1,905 @@
+/* resetting all pages */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+/* centering the content inside the section */
+section {
+  display: flex;
+  justify-content: center;
+}
+
+/* style for welcome page */
+section .welcome-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+/* style for displaying the content on a column view  */
+section .welcome-container .user-option {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+/* for login user and register user */
+section .welcome-container .user-option div {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  align-items: center;
+}
+
+section .welcome-container .user-option div p {
+  font-weight: 700;
+}
+
+section .welcome-container .user-option div a {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 5px 37px;
+}
+
+/* style for both login page and register page */
+section .form-holder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+  gap: 3rem;
+}
+
+/* both for having a margin from left */
+.form-holder .registration-heading {
+  margin-left: 12.2rem;
+}
+
+.form-holder .login-heading {
+  margin-left: 8.9rem;
+}
+
+/* for button to add gap from the input tag */
+section .form-holder form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* submit registration button and login button styling */
+.submit-login {
+  width: 7rem;
+  margin-left: 7.4rem;
+  background: #66ffff;
+  padding: 0.2rem 0 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.submit-registration {
+  width: 7rem;
+  margin-left: 11.3rem;
+  background: #66ffff;
+  padding: 0.2rem 0 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* to add margin on the label, on same line as the input */
+form label {
+  margin-right: 1.5rem;
+}
+
+/* for adding the font weight on the user input div content */
+.user-input {
+  font-weight: 600;
+}
+
+/* for styling the input tag(text, email, password) */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  padding: 0.4rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+/* holder for both the registration and login input tag, label */
+.registration-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.login-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+/* style for register success page */
+.registration-success-container {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.registration-success-container h1,
+.registration-success-container p {
+  margin-bottom: 2rem;
+}
+
+.registration-success-container a {
+  color: #1c1cff;
+}
+
+/* style for both login successful page and user list page */
+/* I put it first here because every nav need to change the style in viewing every page  */
+.current-nav {
+  background-color: white;
+  border-right: 2px solid #000;
+  border-radius: 4px;
+}
+
+/* for adding a width in every column inside the users list page */
+.users-first-column {
+  width: 35%;
+}
+
+.users-second-column {
+  width: 35%;
+}
+
+.users-third-column {
+  width: 18%;
+}
+
+/* adding a padding, height and width for the navbar class for both login success and users list page */
+.login-success .navbar {
+  width: 100%;
+  height: 3rem;
+  padding-left: 3px;
+}
+
+.users-list-form .navbar {
+  width: 100%;
+  height: 3rem;
+  padding-left: 3px;
+}
+
+/* styling ul, li, nav class that can use in all the pages */
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+}
+
+.navbar ul li {
+  text-align: center;
+  background: #bfbfbf;
+}
+
+.navbar ul li .nav {
+  padding-top: 0.7rem;
+  height: 3rem;
+  width: 18.93rem;
+  border: 2px solid #000;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar .nav:hover {
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.last-list a {
+  border-radius: 0 8px 8px 0;
+}
+
+/* adding border on the first anchor tag on the left part */
+.first-list a {
+  border-radius: 8px 0 0 8px;
+}
+
+/* adding background color in all the header on the table */
+tr th {
+  background-color: #ccc;
+}
+
+/* for aligning the text to the start/left on the first column on the table */
+.align-left {
+  text-align: start;
+}
+
+/* styling edit and delete button on the users list page and also for documents list page */
+.edit-button {
+  margin-right: 0.3rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.delete-button {
+  margin-left: 0.3rem;
+  color: #000;
+  text-decoration: none;
+}
+
+/* adding a font weight on the thead because it has the default of like a bolder text in using the th tag */
+th {
+  font-weight: 400;
+}
+
+/* adding padding for td and th on the table */
+td,
+th {
+  padding: 0.5rem 0.5rem;
+}
+
+/* setting the even row to a another background */
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+/* adding a border right after a cell for first and third column */
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 2px solid #000;
+}
+
+/* styling the users h1 on the top before the table */
+.users-list-form div h1 {
+  font-size: 26px;
+  margin: 1rem 0 0.5rem 1rem;
+}
+
+/* setting the every cell on row to align on the center */
+tr {
+  text-align: center;
+}
+
+/* adding a margin from the top and also align the login success main page on the center */
+.login-success div {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* setting the font size of the h1 to 26px and also adding a margin from top and bottom */
+.login-success div h1 {
+  font-size: 26px;
+  margin: 2.5rem 0 3rem;
+}
+
+/* this part is for adding a padding on every empty remaining row on the table */
+.empty {
+  padding: 1rem 0;
+}
+
+/* style for edit user page */
+/* styling the edit user form */
+.edit-user-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* styling the edit user form navbar */
+.edit-user-form .navbar {
+  width: 100%;
+  height: 3rem;
+  padding-left: 3px;
+}
+
+/* styling edit form holder by adding width, alignment and margin to display it on the center position */
+.edit-form-holder {
+  width: 100%;
+  text-align: center;
+  margin-right: 7rem;
+}
+
+/* styling the h1 on the edit user page */
+.edit-form-holder h1 {
+  font-size: 26px;
+  margin-bottom: 3rem;
+  margin-left: 7rem;
+}
+
+/* for centering purposes */
+.edit-form-holder form {
+  margin-right: 29rem;
+}
+
+/* to display the label and input on a column basis */
+.edit-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* to center the save button */
+.submit-edit {
+  margin-left: 36rem;
+}
+
+/* style for delete container */
+/* styling the delete container by adding the needed properties to make it display */
+.delete-container {
+  height: 13.7rem;
+  width: 19rem;
+  margin-top: 10rem;
+  border: 2px solid #000;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 5.9rem;
+  left: 23em;
+  /* adding the opacity to 0 and visibility to hidden to not display the delete container */
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* adding a border and padding on the top part of the modal */
+.delete-container .delete-option-container {
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
+}
+
+/* to make the modal visible */
+.delete-container:target {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+/* styling the top part of the modal */
+.delete-container .delete-close {
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  margin-left: 41px;
+}
+
+/* adding the inline block value to the p tag to make it align with the image  */
+.delete-container .delete-close p {
+  display: inline-block;
+  width: 60rem;
+  text-align: center;
+}
+
+/* styling the image */
+.delete-container .delete-close img {
+  width: 30px;
+  margin: 2px 1px 0 0;
+}
+
+/* styling the close window img on the top right */
+.close-window {
+  margin-top: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* adding some alignment for the middle part container of the modal */
+.delete-container .ques-mark {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.delete-container .ques-mark p {
+  display: inline-block;
+  margin: 1rem 10px 0;
+  font-weight: 700;
+}
+
+.delete-container .ques-mark img {
+  width: 4.5rem;
+  margin-left: 1rem;
+}
+
+/* styling the buttons inside the modal */
+.delete-container .delete-option {
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+
+/* for adding a blue border on the OK button in delete modal */
+.delete-container .delete-option a.active {
+  border: 3px solid #0000ff;
+}
+
+.delete-container .delete-option a {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 0 1.5rem 0.3rem;
+}
+
+/* style for chat page */
+/* styling the nav bar */
+.chat-form .navbar {
+  width: 100%;
+  height: 3rem;
+  padding-left: 3px;
+}
+
+/* styling the main chat/middle container */
+.chat-container {
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* styling the top part of the middle container */
+.chat-close {
+  display: flex;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* displaying the text on the middle part */
+.chat-close p {
+  margin-left: 34rem;
+  width: 10rem;
+}
+
+/* adjusting the X image to the end part */
+.chat-close .close-image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* styling the main middle content by adding a padding */
+.chat-main-content {
+  padding: 2rem 1rem;
+  height: 18rem;
+}
+
+/* styling the last part of the container which include the message part */
+.user-message-container {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100%;
+  padding: 1.5rem 2rem 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24.2rem;
+}
+
+/* styling all the content of the message container */
+.user-message-container p {
+  font-weight: 700;
+  margin-right: 1rem;
+  width: 7rem;
+}
+
+.user-message-container input[type="text"] {
+  width: 64rem;
+  height: 2.5rem;
+  outline: none;
+  border: 2px solid #000;
+  border-radius: 0.3rem;
+  padding: 0.8rem 1rem;
+}
+
+.message-button {
+  position: relative;
+  bottom: 5px;
+  width: 11rem;
+}
+
+.message-button a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem 0.3rem;
+}
+
+.send-message-button {
+  margin-left: 1rem;
+}
+
+/* style for documents list page */
+.documents-list-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.documents-list-form .navbar {
+  width: 100%;
+  height: 3rem;
+  padding-left: 3px;
+}
+
+/* styling the my uploads and shared uploads table */
+.my-uploads-table,
+.shared-uploads-table,
+.share-file-table,
+.users-list-table {
+  width: 1363px;
+  margin-left: 3px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* styling the three columns on both the my uploads and shared uploads table */
+.documents-first-column {
+  width: 34.5%;
+}
+
+.documents-second-column {
+  width: 34%;
+}
+
+.documents-third-column {
+  width: 18%;
+}
+
+/* styling documents container */
+.documents-container {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.documents-container .change-font {
+  margin-left: 0.3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+/* connecting the upload sharing heading part on same line*/
+.documents-container .adding-size {
+  display: inline-block;
+  font-size: 23px;
+}
+
+/* styling user upload button */
+.user-upload-file a {
+  cursor: pointer;
+  font-weight: 600;
+  background: #66ffff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 0 1.9rem 0.3rem 0.5rem;
+  position: absolute;
+  left: 3px;
+  top: 31.5rem;
+  text-decoration: none;
+}
+
+/* style for  upload modal */
+/* styling the upload container by adding the needed properties to make it display */
+.upload-container {
+  background: #fff;
+  width: 40rem;
+  height: 14.8rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  position: absolute;
+  top: 9.5rem;
+  left: 7.4rem;
+  /* adding the opacity to 0 and visibility to hidden to not display the upload container */
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* to make the modal visible */
+.upload-container:target {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+/* displaying a horizontal line to set as a gap */
+.upload-container .file-upload-container {
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid #000;
+}
+
+/* styling the main modal top part*/
+.upload-container .modal-close {
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  margin-left: 41px;
+  text-align: center;
+}
+
+.file-upload-container .modal-close p {
+  display: inline-block;
+  width: 60rem;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 28px;
+}
+
+.file-upload-container .modal-close a {
+  margin-top: 0.9rem;
+}
+
+.file-upload-container .modal-close a img {
+  display: inline-block;
+  width: 2.5rem;
+}
+
+/* styling the file description part */
+.file-description-share {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.file-description-share input[type="text"] {
+  width: 73%;
+  height: 2rem;
+  margin-left: 1.2rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding-left: 0.6rem;
+}
+
+/* styling the file upload part */
+.file-to-upload {
+  margin: 0 0 2rem 3.5rem;
+}
+
+.file-to-upload .choose input[type="file"] {
+  display: none;
+}
+
+.file-to-upload .choose {
+  margin-left: 1.7rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+}
+
+.choose::-webkit-file-upload-button {
+  font-weight: 600;
+  border-radius: 8px;
+  background: #bfbfbf;
+  margin-right: 50px;
+  cursor: pointer;
+  padding: 2px 1rem 0.3rem;
+}
+
+/* styling the file upload buttons part */
+.upload-button-option {
+  margin-left: 2rem;
+}
+
+.upload-button-option .upload-button {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #b3b3b3;
+  font-weight: 600;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 0.1rem 0.6rem 0.4rem;
+}
+
+.upload-button-option .cancel-upload-button {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #b3b3b3;
+  font-weight: 600;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 4px 1.5rem 0.2rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+/* style for edit modal */
+/* styling the edit container by adding the needed properties to make it display */
+.edit-container {
+  background: #fff;
+  width: 35rem;
+  height: 15rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  position: absolute;
+  top: 12rem;
+  left: 11.3rem;
+  /* adding the opacity to 0 and visibility to hidden to not display the edit container */
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* to make the modal visible */
+.edit-container:target {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+/* displaying a horizontal line to set as a gap */
+.edit-container .edit-upload-description {
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid #000;
+}
+
+/* styling the top part of the modal */
+.edit-container .edit-close {
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  margin-left: 41px;
+  text-align: center;
+}
+
+.edit-upload-description .edit-close p {
+  display: inline-block;
+  width: 60rem;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 28px;
+}
+
+.edit-upload-description .edit-close a {
+  margin-top: 0.9rem;
+}
+
+.edit-upload-description .edit-close a img {
+  display: inline-block;
+  width: 2.5rem;
+}
+
+/* styling the main content of the edit file container */
+.modal-main-content {
+  padding: 1.5rem 0 2rem 0;
+  font-size: 20px;
+}
+
+.file-description-edit {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.file-description-edit input[type="text"] {
+  width: 65%;
+  height: 2rem;
+  margin-left: 2.2rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding-left: 0.6rem;
+}
+
+/* styling the save and cancel buttons  */
+.save-button-option {
+  margin-left: 12.6rem;
+}
+
+.save-button-option .save-button {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #b3b3b3;
+  font-weight: 600;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 4px 1.5rem 0.2rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+.save-button-option .cancel-save-button {
+  margin-left: 2.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #b3b3b3;
+  font-weight: 600;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 4px 1.5rem 0.2rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+/* style for share page */
+/* styling sharing container part */
+/* I start on this part because I just copy the table on the top from the users list part and just inherit all the css properties */
+.sharing-container {
+  margin-top: 2rem;
+}
+
+/* styling and styling the sharing container */
+.add-sharing-container {
+  border: 2px solid #000;
+  border-radius: 4px;
+  margin-left: 4px;
+  width: 1362px;
+  height: 5rem;
+  padding: 1.2rem 3rem 0.7rem;
+}
+
+/* style will apply for all the contents inside the add sharing container div */
+.add-sharing-container * {
+  display: inline-block;
+  margin-left: 1.4rem;
+}
+
+/* container adding a margin */
+.share-select-holder {
+  margin-left: 3rem;
+  margin-right: 4rem;
+}
+
+/* for styling the select tag and also removing the previous arrow and adding new */
+.share-select-holder select {
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 4px;
+  width: 22rem;
+  height: 2rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - -4px) center !important;
+  background: url("../image/dropdown.png") no-repeat;
+  background-size: 40px;
+  padding: 8px 15px 8px 16px;
+}
+
+/* styling the add share button */
+.add-sharing-container a {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  color: #000;
+  background: #b3b3b3;
+}
+
+/* style for logout page */
+.user-logout {
+  margin-top: 1rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <!-- edit user form main container -->
+    <div class="edit-user-form">
+      <!-- nav bar for the header part -->
+      <nav class="navbar">
+        <!-- ul for displaying anchor tag without a built in margin between them -->
+        <ul>
+          <li class="first-list">
+            <a href="chat.html" class="nav">Group Chat</a>
+          </li>
+          <li>
+            <a href="users-list.html" class="nav current-nav">Manage Users</a>
+          </li>
+          <li>
+            <a href="documents-list.html" class="nav">Manage Documents</a>
+          </li>
+          <li class="last-list">
+            <a href="logout.html" class="nav">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- div for edit form main holder which includes h1 and the form section-->
+      <div class="edit-form-holder">
+        <h1 class="form-heading">Edit User Information</h1>
+        <!-- form for inputting info of the user -->
+        <form action="./users-list.html" method="get">
+          <!-- edit input container inside a form -->
+          <div class="edit-input">
+            <!-- div for user input which include fullname -->
+            <div class="user-input">
+              <label for="edit-fullname">Full Name</label>
+              <input
+                type="text"
+                name="edit-fullname"
+                id="edit-fullname"
+                value="Anne Hunter"
+              />
+            </div>
+            <!-- div for user input which include email -->
+            <div class="user-input">
+              <label for="edit-email">Email</label>
+              <input
+                type="email"
+                name="edit-email"
+                id="edit-email"
+                value="anne.hunter@mail.com"
+              />
+            </div>
+          </div>
+          <!-- submit button outside the edit input container for saving the changes -->
+          <input type="submit" value="Save" class="submit-login submit-edit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

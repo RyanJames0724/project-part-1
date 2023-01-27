@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Communications Application</title>
+  </head>
+  <body>
+    <section>
+      <div class="form-holder">
+        <h1 class="registration-heading">Register</h1>
+        <form action="./register-success.html" method="get">
+          <div class="registration-holder">
+            <div class="user-input user-email">
+              <label for="register-name">Full Name</label>
+              <input
+                type="text"
+                name="register-name"
+                id="register-name"
+                placeholder="Anne Hunter"
+              />
+            </div>
+            <div class="user-input">
+              <label for="register-password">Email</label>
+              <input
+                type="email"
+                name="register-password"
+                id="register-password"
+                placeholder="anne.hunter@mail.com"
+              />
+            </div>
+            <div class="user-input">
+              <label for="register-password">Password</label>
+              <input
+                type="password"
+                name="register-password"
+                id="register-password"
+                placeholder="123456"
+              />
+            </div>
+            <div class="user-input">
+              <label for="password-confirm">Confirm Password</label>
+              <input
+                type="password"
+                name="password-confirm"
+                id="password-confirm"
+                placeholder="123456"
+              />
+            </div>
+          </div>
+          <input type="submit" value="Register" class="submit-registration" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
